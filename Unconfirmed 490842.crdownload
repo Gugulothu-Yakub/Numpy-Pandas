@@ -1,0 +1,1072 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[4]:
+
+
+import numpy as np
+from matplotlib import pyplot as plt
+x=np.arange(1,20)
+x
+y=x*2
+y
+plt.plot(x,y)
+plt.show()
+
+
+# In[10]:
+
+
+from pandas.core.indexes.base import Index
+import pandas as pd
+s1= pd.Series([1,2,3,4,5],[6,7,8,9,10])
+s2=pd.Series({'x':20,'y':10})
+s1,s2
+
+
+# In[7]:
+
+
+
+from matplotlib import pyplot as plt
+friends=['anusha','lavanya','manisha','yakub']
+quantity= [20,30,10,40]
+plt.pie(quantity,labels=friends,autopct='%0.3f%%')
+plt.show()
+
+
+# In[16]:
+
+
+class phone:
+    def make_call(self):
+        print("make call")
+    def setcolor(self,color):
+        self.color=color
+    def showcolor(self):
+        return self.color1
+    p1=phone()
+    p1.make_call()
+    p1.setcolor=("blue")
+    p1.showcolor()
+
+
+# In[1]:
+
+
+import numpy as np
+n1=np.array([1,2,3,4,5])
+n1
+
+
+# In[4]:
+
+
+n2=np.array([[1,2,3,4,5],[6,7,8,9,0]])
+n2
+
+
+# In[5]:
+
+
+type(n2)
+
+
+# In[6]:
+
+
+n3=np.zeros((5,6))
+n3
+
+
+# In[7]:
+
+
+n4=np.full((3,3),55)
+n4
+
+
+# In[14]:
+
+
+n5=np.arange(10,99)
+n5
+
+
+# In[15]:
+
+
+n6=np.arange(10,99,10)
+n6
+
+
+# In[10]:
+
+
+np.array([1,2])
+
+
+# In[33]:
+
+
+n1=np.array([[1,2,3],[0,9,8]])
+n2=np.array([4,5,6])
+
+
+# In[26]:
+
+
+n1,n2
+
+
+# In[27]:
+
+
+np.vstack((n1,n2))
+
+
+# In[32]:
+
+
+np.hstack((n1,n2))
+
+
+# In[31]:
+
+
+np.column_stack((n1,n2))
+
+
+# In[34]:
+
+
+np.vstack((n1,n2))
+
+
+# In[37]:
+
+
+n1=np.array([1,2,3,4,5])
+n2=np.array([4,5,6,7,8])
+n1,n2
+
+
+# In[38]:
+
+
+np.intersect1d(n1,n2)
+
+
+# In[39]:
+
+
+np.setdiff1d(n1,n2)
+
+
+# In[40]:
+
+
+np.setdiff1d(n2,n1)
+
+
+# In[41]:
+
+
+n1=n1+1
+n1
+
+
+# In[42]:
+
+
+n1=n1*2
+n1
+
+
+# In[43]:
+
+
+n1=n1/2
+n1
+
+
+# In[47]:
+
+
+n1=np.array([1,2,3,4,5])
+np.save("yakub",n1)
+
+
+# In[48]:
+
+
+n2=np.load("yakub.npy")
+
+
+# In[49]:
+
+
+n2
+
+
+# In[9]:
+
+
+import numpy as np
+n0=np.arange(100)
+n0
+
+
+# In[17]:
+
+
+import pandas as pd
+
+
+# In[21]:
+
+
+s1=pd.Series([1,2,3,4,5])
+s1
+
+
+# In[22]:
+
+
+s1=pd.Series([1,2,3],index=(['a','b','c']))
+s1
+
+
+# In[23]:
+
+
+pd.Series({'a':10,'b':20,'c':30})
+
+
+# In[26]:
+
+
+pd.Series({'a':10,'b':20,'c':30},index=['c','e','f','b','a'])
+
+
+# In[28]:
+
+
+s1=pd.Series([1,2,3,4,5])
+s1[3]
+
+
+# In[29]:
+
+
+s1=pd.Series([1,2,3,4,5])
+s1[:4]
+
+
+# In[31]:
+
+
+s1=pd.Series([1,2,3,4,5])
+s1[2:4]
+
+
+# In[32]:
+
+
+s1=pd.Series([1,2,3,4,5])
+s1[-3:]
+
+
+# In[34]:
+
+
+s1=pd.Series([1,2,3,4,5])
+s1[:-2]
+
+
+# In[35]:
+
+
+s1=pd.Series([1,2,3,4,5])
+s1
+
+
+# In[36]:
+
+
+s1+2
+
+
+# In[37]:
+
+
+s1/4
+
+
+# In[38]:
+
+
+s1=pd.Series([1,2,3,4,5])
+s2=pd.Series([1,2,3,4,5])
+s1+s2
+
+
+# In[42]:
+
+
+pd.DataFrame({'name':['yakub','lavanya'],'marks':[100,80]},index=['a','b'])
+
+
+# In[3]:
+
+
+import pandas as pd
+iris=pd.read_csv('iris.csv')
+
+
+# In[4]:
+
+
+iris.head()
+
+
+# In[5]:
+
+
+iris.tail()
+
+
+# In[6]:
+
+
+iris.shape
+
+
+# In[7]:
+
+
+iris.describe()
+
+
+# In[8]:
+
+
+iris.iloc[0:3,0:2]
+
+
+# In[10]:
+
+
+iris.loc[0:3,('sepal.length','sepal.width')]
+
+
+# In[12]:
+
+
+iris.drop('sepal.length',axis=1)
+
+
+# In[5]:
+
+
+import pandas as pd
+iris=pd.read_csv('iris.csv')
+iris.min()
+
+
+# In[6]:
+
+
+iris.max()
+
+
+# In[7]:
+
+
+iris.mean()
+
+
+# In[8]:
+
+
+iris.median()
+
+
+# In[9]:
+
+
+def square(s):
+    return s*2
+
+
+# In[10]:
+
+
+iris[['sepal.length']].apply(square)
+
+
+# In[11]:
+
+
+iris['sepal.length'].value_counts()
+
+
+# In[12]:
+
+
+iris.sort_values(by='sepal.length')
+
+
+# In[ ]:
+
+
+--------------------------------matplotlib------------------------------------------------------------------------
+
+
+# In[13]:
+
+
+import numpy as np
+from matplotlib import pyplot as plt
+
+
+# In[14]:
+
+
+x=np.arange(10,30)
+x
+
+
+# In[15]:
+
+
+y=2*x
+
+
+# In[16]:
+
+
+plt.plot(x,y)
+plt.show()
+
+
+# In[17]:
+
+
+plt.plot(x,y)
+plt.title('line plot')
+plt.xlabel('x label')
+plt.ylabel('y label')
+plt.show()
+
+
+# In[18]:
+
+
+plt.plot(x,y,color='g',linestyle=':',linewidth=5)
+plt.title('line plot')
+plt.xlabel('x label')
+plt.ylabel('y label')
+plt.show()
+
+
+# In[21]:
+
+
+x=np.arange(1,11)
+y1=2*x
+
+
+# In[24]:
+
+
+y2=x/2
+
+
+# In[25]:
+
+
+y3=x-5
+
+
+# In[28]:
+
+
+plt.plot(x,y1,y2,y3)
+plt.show()
+
+
+# In[29]:
+
+
+plt.plot(x,y1,color='r',linestyle=':',linewidth=5)
+plt.plot(x,y2,color='g',linestyle='-',linewidth=5)
+plt.title('line plot')
+plt.xlabel('x label')
+plt.ylabel('y label')
+plt.grid(True)
+plt.show()
+
+
+# In[30]:
+
+
+plt.subplot(1,2,1)
+plt.plot(x,y1,color='r',linestyle=':',linewidth=5)
+plt.title('line plot')
+plt.xlabel('x label')
+plt.ylabel('y label')
+plt.grid(True)
+plt.subplot(1,2,2)
+plt.plot(x,y2,color='g',linestyle='-',linewidth=5)
+plt.title('line plot')
+plt.xlabel('x label')
+plt.ylabel('y label')
+plt.grid(True)
+plt.show()
+
+
+# In[33]:
+
+
+student={'yakub':100,'anusha':90,'lavanya':80}
+
+
+# In[34]:
+
+
+student
+
+
+# In[35]:
+
+
+names=list(student.keys())
+
+
+# In[36]:
+
+
+names
+
+
+# In[37]:
+
+
+values=list(student.values())
+
+
+# In[38]:
+
+
+values
+
+
+# In[39]:
+
+
+plt.bar(names,values)
+plt.title('bar plot')
+plt.xlabel('Names of students')
+plt.ylabel('marks of students')
+plt.grid(True)
+plt.show()
+
+
+# In[40]:
+
+
+x=np.arange(1,20)
+y=np.arange(20,39)
+
+
+# In[41]:
+
+
+x
+
+
+# In[42]:
+
+
+y
+
+
+# In[43]:
+
+
+plt.scatter(x,y)
+plt.show()
+
+
+# In[45]:
+
+
+plt.scatter(x,y,marker='*',s=100)
+plt.show()
+
+
+# In[46]:
+
+
+z=np.arange(40,59)
+z
+
+
+# In[47]:
+
+
+plt.scatter(x,y,marker='*',c='g',s=200)
+plt.scatter(x,z,marker='.',c='r',s=200)
+plt.show()
+
+
+# In[48]:
+
+
+m=[1,3,3,3,3,9,9,5,4,4,8,8,8,6,7]
+plt.hist(m)
+plt.show()
+
+
+# In[49]:
+
+
+data=list([x,y,z])
+data
+
+
+# In[50]:
+
+
+plt.boxplot(data)
+plt.show()
+
+
+# In[51]:
+
+
+plt.violinplot(data,showmedians=True)
+plt.show()
+
+
+# In[55]:
+
+
+friends=['anusha','lavanya','manisha','yakub']
+quantity= [20,30,10,40]
+plt.pie(quantity,labels=friends,autopct='%0.3f%%')
+plt.show()
+
+
+# In[54]:
+
+
+friends=['anusha','lavanya','manisha','yakub']
+quantity= [20,30,10,40]
+plt.pie(quantity,labels=friends,autopct='%0.3f%%',colors=['red','yellow','blue','black'])
+plt.show()
+
+
+# In[6]:
+
+
+import numpy as np
+from matplotlib import pyplot as plt
+
+
+# In[12]:
+
+
+friends=['anusha','lavanya','manisha','yakub']
+quantity= [20,30,10,40]
+plt.pie(quantity,labels=friends,radius=2,autopct='%0.3f%%')
+plt.pie([1],colors=['w'],radius=1)
+plt.show()
+
+
+# In[26]:
+
+
+import seaborn as sns
+import pandas as pd
+from matplotlib import pyplot as plt
+
+
+# In[24]:
+
+
+import pandas as pd
+iris=pd.read_csv('iris.csv')
+
+
+# In[25]:
+
+
+iris.head()
+
+
+# In[19]:
+
+
+letter = 'hai sethuraman'
+for i in letter:
+    if i == 'a':
+        pass
+        print('pass statement is execute ..............')
+    else:
+        print(i)
+
+
+# In[20]:
+
+
+import os
+print (os.path.expanduser('~'))
+
+
+# In[2]:
+
+
+from tkinter import * 
+from tkinter.ttk import *
+win = Tk() 
+win.geometry("250x250") 
+var = StringVar(win) 
+options = {" Option_1" : "A", 
+		"Option_2" : "B", 
+		"Option_3" : "C", 
+		"Option_4" : "D" 
+		} 
+for (txtt, vall) in options.items(): 
+	Radiobutton(win,text=txtt, variable=var, value=vall).pack(side=TOP, ipady = 5) 
+mainloop() 
+
+
+# In[1]:
+
+
+from tkinter import *   
+top = Tk()  
+top.geometry("100x100")  
+check1 = IntVar()  
+check2 = IntVar()  
+check3 = IntVar()  
+ckbtn1 = Checkbutton(top, text = "PYTHON", variable = check1)  
+ckbtn2 = Checkbutton(top, text = "CYTHON", variable = check2)  
+ckbtn3 = Checkbutton(top, text = "JYTHON", variable = check3)
+ckbtn1.pack()  
+ckbtn2.pack()  
+ckbtn3.pack()  
+top.mainloop() 
+
+
+# In[4]:
+
+
+from django.db import models from
+tkinter import CASCADE # Create
+your models here.
+class UserRegistration(models.Model):
+userid =
+models.CharField(max_length=50) firstname
+=
+models.CharField(max_length=300
+
+) email = models.CharField(max_length=100
+) password = models.CharField(max_length=100
+) mobilenumber =
+models.CharField(max_length=20) dob
+
+=
+
+models.CharField(max_length=100
+)
+
+gender =
+models.CharField(max_length=100) address
+=
+models.CharField(max_length=100)
+
+import os
+# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+# Quick-start development settings - unsuitable for production
+# See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
+# SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = 's=eg-8*yj25g0am!_va@21*)!xsa9k5&hy(43bsuai)t6m@n-a'
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = True
+ALLOWED_HOSTS = []
+
+# Application definition
+INSTALLED_APPS = [
+'django.contrib.admin',
+'django.contrib.auth',
+'django.contrib.contenttypes',
+'django.contrib.sessions',
+'django.contrib.messages',
+'django.contrib.staticfiles',
+'app1',
+]
+MIDDLEWARE = [
+'django.middleware.security.SecurityMiddleware',
+'django.contrib.sessions.middleware.SessionMiddleware',
+'django.middleware.common.CommonMiddleware',
+'django.middleware.csrf.CsrfViewMiddleware',
+'django.contrib.auth.middleware.AuthenticationMiddleware',
+'django.contrib.messages.middleware.MessageMiddleware',
+'django.middleware.clickjacking.XFrameOptionsMiddleware',
+]
+ROOT_URLCONF = 'first.urls'
+TEMPLATES = [
+{
+'BACKEND': 'django.template.backends.django.DjangoTemplates',
+'DIRS': [],
+'APP_DIRS': True,
+'OPTIONS': {
+'context_processors': [
+'django.template.context_processors.debug',
+'django.template.context_processors.request',
+'django.contrib.auth.context_processors.auth',
+    'django.contrib.messages.context_processors.messages',
+],
+},
+},
+]
+WSGI_APPLICATION = 'first.wsgi.application'
+
+# Database
+# https://docs.djangoproject.com/en/2.2/ref/settings/#databases
+DATABASES = {
+'default': {
+'ENGINE': 'django.db.backends.sqlite3',
+'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+}
+}
+
+# Password validation
+# https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
+AUTH_PASSWORD_VALIDATORS = [
+{
+'NAME':
+'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+},
+{
+'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+},
+{
+'NAME':
+'django.contrib.auth.password_validation.CommonPasswordValidator',
+},
+{
+'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+},
+]
+from builtins import Exception, zip
+from django.shortcuts import render
+from django.http import
+HttpResponse
+#from past.builtins import raw_input
+from user.models import * from
+user.forms import * from
+django.contrib import
+messages from user.models
+import * from
+admin1.models import *
+
+from bs4 import
+BeautifulSoup import
+requests import json
+from .jp import job_data
+import pandas
+as pd
+def index(request): return render(request,'index.html')
+def userlogin(request): return render(request,'user/userlogin.html')
+def userpage(request): return render(request,'user/userpage.html')
+def userregister(request):
+if request.method=='P
+OST':
+form1=userForm(request.P
+OST) if form1.is_valid():
+form1.save() print("succesfully saved the data")
+return
+render(request,
+"user/userlogin.html")
+#return HttpResponse("registreration succesfully completed") else:
+print("form not valied") return HttpResponse("form
+not valied") else:
+form=userForm()
+return render(request,"user/userregister.html",{"form":form})
+
+def userlogincheck(reques
+t): if request.method == 'POST':
+sname = request.POST.get('sname')
+print(sname) spasswd =
+request.POST.get('spasswd')
+print(spasswd) try:
+                                             check = usermodel.objects.get(email=sname, passwd=spasswd)
+# print('usid',usid,'pswd',pswd) print(check)
+# request.session['name'] = check.name
+# print("name",check.name)
+status = check.status
+print('status',status) if status ==
+"Activated":
+request.session['email'] = check.email
+return render(request, 'user/userpage.html')
+else: messages.success(request, 'user
+is not activated') return render(request,
+'user/userlogin.html') except Exception as e:
+print('Exception is ',str(e))
+messages.success(request,'Invalid name and password')
+return render(request,'user/userlogin.html')
+
+def search(request): return render(request,'user/search.html')
+
+def searchresult(request): if request.method == 'POST':
+name=request.POST.get('t1')
+qs=csvdatamodel.objects.filter(name=name) return
+render(request,'user/searchresult.html',{"qs":qs})
+
+def wbscrapp(request): return
+render(request,'user/wbscrapp.html')
+
+def fpkart(request): url =
+'https://www.flipkart.com/search?q=mobile s'
+res = requests.get(url).content soup =
+BeautifulSoup(res, 'html.parser') titles =
+soup.find_all('div', class_='_3wU53n') ratings
+= soup.find_all('div', class_='hGSR34')
+reviews = soup.find_all('span', class_='_38sUEc')
+prices = soup.find_all('div', class_='_1vC4OE')
+                                             mobiles = [] m_ratings =
+[] m_reviews = []
+m_prices = []
+for title, rating, review, price in zip(titles, ratings, reviews, prices):
+# print(c, title.text,rating.text,review.text,price.text)
+mobiles.append(title.text)
+m_ratings.append(rating.text)
+m_reviews.append(review.text)
+m_prices.append(price.text) # Exporting to
+CSV files data = {'mobiles': mobiles, 'ratings':
+m_ratings, 'reviews': m_reviews, 'prices':
+m_prices}
+df = pd.DataFrame(data=data)
+print(df.head())
+df.to_csv('mobile_data.csv', index=False) print('Success..!') return
+render(request, "user/userpage.html")
+
+def jobsearch(request): if
+request.method == 'POST': job =
+request.POST['title'] location
+= request.POST['location']
+job =
+job.strip() j = job.title().strip()
+items = j.split(' ') location
+= location.strip() job
+= job.replace(' ', '+')
+url = 'https://www.indeed.co.in/jobs?q=' + job + '&amp;l=' + location + '&amp;sort=date'
+x, y, z, a, b = job_data(url, items)
+data = zip(x, y, z, a, b)
+if len(x) > 0:
+context
+= {
+'data': data,
+    } else:
+context = {
+'message': 'No Jobs Found..!',
+}
+return render(request, 'user/jobsearch.html', context)
+return render(request,'user/jobsearch.html')
+
+
+# In[1]:
+
+
+import cv2
+
+import sys
+
+cascPath = sys.argv[1]
+
+faceCascade = cv2.CascadeClassifier(cascPath)
+
+video_capture = cv2.VideoCapture(0)
+
+while True:
+
+    # Capture frame-by-frame
+    ret, frame = video_capture.read()
+
+    gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+
+    faces = faceCascade.detectMultiScale(
+        gray,
+        scaleFactor=1.1,
+        minNeighbors=5,
+        minSize=(30, 30),
+        flags=cv2.cv.CV_HAAR_SCALE_IMAGE
+    )
+
+    # Draw a rectangle around the faces
+    for (x, y, w, h) in faces:
+        cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 2)
+
+    # Display the resulting frame
+    cv2.imshow('Video', frame)
+
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        break
+
+#When everything is done, release the capture
+video_capture.release()
+
+
+# In[6]:
+
+
+#DataFlair - Extract features (mfcc, chroma, mel) from a sound file
+def extract_feature(file_name, mfcc, chroma, mel):
+    with soundfile.SoundFile(file_name) as sound_file:
+        X = sound_file.read(dtype="float32")
+        sample_rate=sound_file.samplerate
+        if chroma:
+            stft=np.abs(librosa.stft(X))
+        result=np.array([])
+        if mfcc:
+            mfccs=np.mean(librosa.feature.mfcc(y=X, sr=sample_rate, n_mfcc=40).T, axis=0)
+            result=np.hstack((result, mfccs))
+        if chroma:
+            chroma=np.mean(librosa.feature.chroma_stft(S=stft, sr=sample_rate).T,axis=0)
+            result=np.hstack((result, chroma))
+        if mel:
+            mel=np.mean(librosa.feature.melspectrogram(X, sr=sample_rate).T,axis=0)
+            result=np.hstack((result, mel))
+    return result
+
+
+# In[7]:
+
+
+#DataFlair - Emotions in the RAVDESS dataset
+emotions={
+  '01':'neutral',
+  '02':'calm',
+  '03':'happy',
+  '04':'sad',
+  '05':'angry',
+  '06':'fearful',
+  '07':'disgust',
+  '08':'surprised'
+}
+
+#DataFlair - Emotions to observe
+observed_emotions=['calm', 'happy', 'fearful', 'disgust']
+
+
+# In[ ]:
+
+
+
+
